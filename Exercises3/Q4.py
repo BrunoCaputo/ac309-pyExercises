@@ -74,7 +74,7 @@ class Operario(Empregado):
         self.__comissao = comission
 
     def calcularSalario(self):
-        comissao = self.__valorProducao * (1 + (self.__comissao / 100))
+        comissao = self.__valorProducao * (self.__comissao / 100)
         return super().calcularSalario() + comissao
 
     def getValorProducao(self):

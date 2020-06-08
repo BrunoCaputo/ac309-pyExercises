@@ -73,7 +73,7 @@ class Vendedor(Empregado):
         self.__comissao = comission
 
     def calcularSalario(self):
-        comissao = self.__valorVendas * (1 + (self.__comissao / 100))
+        comissao = self.__valorVendas * (self.__comissao / 100)
         return super().calcularSalario() + comissao
 
     def getValorVendas(self):
